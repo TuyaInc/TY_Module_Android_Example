@@ -22,6 +22,10 @@
 ```
 
 ## Provider介绍
+ ***Provider 主要是用来和Tuya APP沟通的桥梁
+
+### 命名规则
+需要以Provider结尾,模块名最好以公司简称命名，避免重复
 
 ### Fragment加载
 
