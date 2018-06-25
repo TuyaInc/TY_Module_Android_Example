@@ -1,1 +1,1 @@
-include ':demoapp', 'demoModule', ':tuyasmart-router', ':smartApi-release'
+include ':demoapp', 'demoModule', ':tuyasmart-router', ':smartApi-release', ':tuyasmart'
