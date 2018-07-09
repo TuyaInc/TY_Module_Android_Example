@@ -14,5 +14,5 @@
 + 首页TAB配置放在assets的tab_config.json中
 
 ## 导航
-+ 独立的功能模块Module支持跳转的，需要继承实现com.tuya.smart.api.module.ModuleApp的start方法，通过tuyaSmart://platformapi?app=?&key=value&key1=value1的方式进行页面导航，页面跳转调用execute(Context context, String url)方法进行跳转，会根据url中的app值跳转到对应的ModuleApp
++ 独立的功能模块Module支持跳转的，需要继承实现com.tuya.smart.api.module.ModuleApp的start方法，通过tuyaSmart://platformapi?app=?&key=value&key1=value1的方式进行页面导航，页面跳转调用com.tuya.smart.api.router.UrlRouter.execute(Context context, String url)方法进行跳转，会根据url中的app值跳转到对应的ModuleApp
 + 各ModuleApp配置放在assets的module_app.json中
