@@ -1,11 +1,11 @@
 package com.tuya.demo.tab;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.TextView;
 
 import com.tuya.demomodule.R;
-import com.tuya.smart.api.tab.BaseTabFragment;
 import com.tuya.smart.api.tab.ITabGetter;
 
 public class TabGetterA implements ITabGetter {
@@ -18,7 +18,7 @@ public class TabGetterA implements ITabGetter {
     }
 
     @Override
-    public BaseTabFragment getFragment() {
+    public Fragment getFragment() {
         return new DemoTabFragmentA();
     }
 }

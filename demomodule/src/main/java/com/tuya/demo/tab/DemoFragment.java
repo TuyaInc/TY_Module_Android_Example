@@ -3,6 +3,7 @@ package com.tuya.demo.tab;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +12,8 @@ import android.widget.TextView;
 
 import com.tuya.demomodule.R;
 import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.api.tab.BaseTabFragment;
 
-public abstract class DemoFragment extends BaseTabFragment {
+public abstract class DemoFragment extends Fragment {
 
     protected Button button;
 
