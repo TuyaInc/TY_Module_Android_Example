@@ -1,6 +1,6 @@
 {
   "moduleMap": {
-    "home": "com.tuya.smart.HomeApp",
+    "home": "com.tuya.smart.appshell.HomeApp",
     "demo": "com.tuya.demo.DemoModuleApp"
   }
 }

@@ -10,6 +10,6 @@
     <!-- 焦点状态下 -->
     <item android:color="#ff3b20" android:state_focused="true" />
     <!-- 正常状态下 -->
-    <item android:color="#ac9cac" />
+    <item android:color="#8a8e91" />
 
 </selector>

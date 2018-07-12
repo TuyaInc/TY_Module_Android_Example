@@ -13,7 +13,7 @@ public class TabGetterA implements ITabGetter {
     public View getIndicatorView(Context context) {
         View view = View.inflate(context, R.layout.tab_item, null);
         TextView textView = view.findViewById(R.id.title);
-        textView.setText("TABA");
+        textView.setText("家庭");
         return view;
     }
 

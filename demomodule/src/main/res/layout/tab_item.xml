@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_nav"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tab_launcher_round"
+        android:layout_marginTop="2dp"
+        android:tint="@color/tab"/>
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_nav"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
         android:gravity="center"
         android:textColor="@color/tab"
-        android:text="test"
-        android:textSize="14dp" />
-</LinearLayout>
+        android:textSize="10sp" />
+</RelativeLayout>
