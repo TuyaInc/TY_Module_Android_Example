@@ -24,7 +24,7 @@ public abstract class DemoFragment extends Fragment {
         View contentView = inflater.inflate(R.layout.fragment_demo, container, false);
 
         ((TextView) contentView.findViewById(R.id.demo_content)).setText(getContent());
-        button = contentView.findViewById(R.id.demo_button);
+        button = (Button) contentView.findViewById(R.id.demo_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

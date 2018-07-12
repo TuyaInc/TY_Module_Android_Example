@@ -12,7 +12,7 @@ public class TabGetterB implements ITabGetter {
     @Override
     public View getIndicatorView(Context context) {
         View view = View.inflate(context, R.layout.tab_item, null);
-        TextView textView = view.findViewById(R.id.title);
+        TextView textView = (TextView) view.findViewById(R.id.title);
         textView.setText("我的");
         return view;
     }
