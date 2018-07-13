@@ -1,6 +1,12 @@
 {
   "tabList": [
-    {"tabGetter": "com.tuya.demo.tab.TabGetterA"},
-    {"tabGetter": "com.tuya.demo.tab.TabGetterB"}
+    {
+      "tabGetter": "com.tuya.demo.tab.TabGetterA",
+      "name": "home"
+    },
+    {
+      "tabGetter": "com.tuya.demo.tab.TabGetterB",
+      "name": "my"
+    }
   ]
 }

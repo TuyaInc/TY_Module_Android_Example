@@ -26,7 +26,7 @@ public class LauncherActivityAgentExample extends LaunchActivityAgent {
             @Override
             public void run() {
                 UrlRouter.execute(activity, UrlRouter.SCHEME_PREFIX
-                        + UrlRouter.MODULE_APP + "=home");
+                        + UrlRouter.MODULE_APP + "=home&tab=my");
             }
         }, 2000);
     }
