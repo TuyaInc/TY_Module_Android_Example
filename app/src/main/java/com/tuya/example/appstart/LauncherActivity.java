@@ -1,31 +1,24 @@
 package com.tuya.example.appstart;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 
 import com.tuya.example.R;
-import com.tuya.smart.api.app.LaunchActivityAgent;
 import com.tuya.smart.api.router.UrlRouter;
 
-public class LauncherActivityAgentExample extends LaunchActivityAgent {
+public class LauncherActivity extends AppCompatActivity {
 
-    private Activity activity;
     private Handler handler = new Handler();
-
-    public LauncherActivityAgentExample(Activity activity) {
-        super(activity);
-        this.activity = activity;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        activity.setContentView(R.layout.splash_activity_splash);
+        setContentView(R.layout.splash_activity_splash);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                UrlRouter.execute(activity, UrlRouter.SCHEME_PREFIX
+                UrlRouter.execute(LauncherActivity.this, UrlRouter.SCHEME_PREFIX
                         + UrlRouter.MODULE_APP + "=home&tab=my");
             }
         }, 2000);
