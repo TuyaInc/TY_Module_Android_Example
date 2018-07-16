@@ -1,12 +1,8 @@
 # TY_Module_Android_Example
 
-## APP初始化
+## APP初始化 
 + 针对在APP启动时增加自定义的初始化逻辑，不需要无需实现
 + 继承com.tuya.smart.api.app.LauncherApplicationAgent实现APP初始化逻辑，Application的生命周期会回调LauncherApplicationAgent的对应方法，将自定义的LauncherApplicationAgent在AndroidManifest中配置进行<meta-data android:name="APPLICATION_AGENT" android:value="xxx"/>，xxx为自定义的LauncherApplicationAgent的全名(包括包名)
-
-## Splash启动页面
-+ 针对需要深度定义Splash启动页面启动逻辑，不需要无需实现
-+ 继承com.tuya.smart.api.app.LaunchActivityAgent，Splash在各生命周期会回调LaunchActivityAgent对应方法
 
 ## 首页TAB定义
 + 针对需要在首页插入自定义TAB
