@@ -261,3 +261,6 @@ public class TestServiceImpl extends TestService {
 #保留所有pipeline
 
 ```
+
+## SDK
+[Tuya Smart Android SDK](https://github.com/TuyaInc/tuyasmart_home_android_sdk)
