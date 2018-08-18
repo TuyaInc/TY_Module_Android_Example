@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tuya.demomodule2">
+
+    <application>
+        <activity android:name="com.tuya.personal.module.SettingActivity" />
+        <activity android:name="com.tuya.personal.module.PersonalActivity" />
+    </application>
+</manifest>

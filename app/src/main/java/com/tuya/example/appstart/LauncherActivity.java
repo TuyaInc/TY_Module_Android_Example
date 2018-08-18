@@ -2,12 +2,17 @@ package com.tuya.example.appstart;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 
 import com.tuya.example.R;
+import com.tuya.smart.api.base.BaseActivity;
+import com.tuya.smart.api.router.UrlBuilder;
 import com.tuya.smart.api.router.UrlRouter;
+import com.tuya.smart.api.tab.Constants;
 
-public class LauncherActivity extends AppCompatActivity {
+/**
+ * @author huyang
+ */
+public class LauncherActivity extends BaseActivity {
 
     private Handler handler = new Handler();
 
@@ -18,8 +23,10 @@ public class LauncherActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                UrlRouter.execute(LauncherActivity.this, UrlRouter.SCHEME_PREFIX
-                        + UrlRouter.MODULE_APP + "=home&tab=my");
+                UrlBuilder urlBuilder = UrlRouter.makeBuilder(LauncherActivity.this,
+                        "appshell").putString(Constants.TAB_PARAM, "my");
+                UrlRouter.execute(urlBuilder);
+                finish();
             }
         }, 2000);
     }

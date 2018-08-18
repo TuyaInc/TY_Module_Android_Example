@@ -1,1 +1,2 @@
-include ':app', ':demomodule', ':tuya-framework', ':tuya-tabshell', ":tuya-sdk"
+include ':app', ':home', ':my', ':home-api', ':common'
+include ':sdk-appshell', ':sdk-framework',':sdk-tuyasmart'

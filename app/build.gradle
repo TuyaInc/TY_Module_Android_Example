@@ -1,44 +1,72 @@
 apply plugin: 'com.android.application'
+apply plugin: 'tymodule-config'
+
+def ext = rootProject.ext
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion ext.compileSdkVersion
+    buildToolsVersion ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.tuya.android.example"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName '1.0'
         multiDexEnabled true
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
         }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    dexOptions {
+        jumboMode true
+        preDexLibraries true
+        javaMaxHeapSize "4g"
+        additionalParameters = ['--multi-dex',
+                                '--set-max-idx-number=65000']
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation 'com.android.support:multidex:1.0.3'
-    implementation 'com.alibaba:fastjson:1.1.64.android'
-    implementation project(':demomodule')
-    implementation project(':tuya-framework')
-    implementation project(':tuya-tabshell')
-    implementation project(':tuya-sdk')
-    testImplementation 'junit:junit:4.12'
-    compile 'com.alibaba:fastjson:1.1.45.android'
-    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
-    compile 'de.greenrobot:eventbus:2.4.0'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
-    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':home')
+    implementation project(':my')
+    implementation project(':sdk-tuyasmart')
+
+    implementation 'com.alibaba:fastjson:1.1.45.android'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
 }

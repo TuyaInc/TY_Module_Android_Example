@@ -1,25 +1,37 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
     repositories {
+        maven {
+            url 'https://raw.githubusercontent.com/TuyaInc/mavenrepo/master/releases'
+        }
         google()
+        mavenLocal()
+        mavenCentral()
         jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://central.maven.org/maven2/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.tuya.android.module:tymodule-config:0.2.4'
     }
 }
 
 allprojects {
     repositories {
+        maven {
+            url 'https://raw.githubusercontent.com/TuyaInc/mavenrepo/master/releases'
+        }
         google()
+        mavenCentral()
+        mavenLocal()
         jcenter()
+        maven { url 'http://central.maven.org/maven2/' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://jitpack.io" }
     }
-
 }
 
 task clean(type: Delete) {
@@ -28,8 +40,9 @@ task clean(type: Delete) {
 
 ext {
     minSdkVersion = 16
-    targetSdkVersion = 25
-    compileSdkVersion = 25
-    buildToolsVersion = "26.0.2"
-    supportLibVersion = "25.3.1"
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
+    supportLibVersion = '27.1.1'
 }
+

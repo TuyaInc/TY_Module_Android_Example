@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中状态下 -->
+    <item android:color="#ff3b20" android:state_selected="true" />
+    <!-- 正常状态下 -->
+    <item android:color="#8a8e91" />
+
+</selector>
