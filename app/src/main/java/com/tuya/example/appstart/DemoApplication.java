@@ -1,17 +1,21 @@
 package com.tuya.example.appstart;
 
+import android.support.multidex.MultiDexApplication;
+
+import com.tuya.smart.api.SmartInitializer;
 import com.tuya.smart.api.logger.LogUtil;
-import com.tuya.smart.framework.LauncherApplication;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;
 
 /**
  * @author huyang
  */
-public class DemoApplication extends LauncherApplication {
+public class DemoApplication extends MultiDexApplication {
 
     @Override
     public void onCreate() {
         super.onCreate();
+        SmartInitializer.setDebug(true);
+        SmartInitializer.init(this);
         LogUtil.d("DemoApplication", "onCreate");
         //使用涂鸦sdk开发接入时使用下述方法进行初始化
         //直接作为涂鸦app的一部分开发的时候不需要设置(使用demo调试的时候可以进行设置，正式release时不要设置)

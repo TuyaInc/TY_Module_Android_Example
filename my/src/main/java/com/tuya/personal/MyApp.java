@@ -16,7 +16,7 @@ import java.util.Map;
 @TYRouter({"setting", "personal"})
 public class MyApp extends ModuleApp {
     @Override
-    public void startForResult(Context context, String target, Bundle bundle, int requestCode) {
+    public void route(Context context, String target, Bundle bundle, int requestCode) {
         Class<? extends Activity> activityClass = activityMap.get(target);
         if (activityClass != null) {
             Intent intent = new Intent(context, activityClass);
