@@ -26,7 +26,7 @@ public interface ITabGetter {
 	+ name为tab的名字，需要和其他tab不同，跳转时会根据此name跳转到相应的tab，如下属链接会跳转到到ty_device这个tab
 
 ```
-tuyaSmart://home?tab=ty_device
+tuyaSmart://appshell?tab=ty_device
 ```
 
 ```
