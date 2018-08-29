@@ -66,7 +66,7 @@ public abstract class ModuleApp {
      * @requestCode if> 0, this code must be returned in
      * onActivityResult() when the activity exits
      */
-    public abstract void startForResult(Context context, String target, Bundle bundle, int requestCode);
+    public abstract void route(Context context, String target, Bundle bundle, int requestCode);
 }
 
 ```
@@ -74,10 +74,10 @@ public abstract class ModuleApp {
 例：
 
 ```
-@TYRouter({"demo2", "demo3","notify"})
-public class DemoModuleApp2 extends ModuleApp {
+@TYRouter({"setting", "personal"})
+public class MyApp extends ModuleApp {
     @Override
-    public void startForResult(Context context, String target, Bundle bundle, int requestCode) {
+    public void route(Context context, String target, Bundle bundle, int requestCode) {
         Class<? extends Activity> activityClass = activityMap.get(target);
         if (activityClass != null) {
             Intent intent = new Intent(context, activityClass);
@@ -88,17 +88,17 @@ public class DemoModuleApp2 extends ModuleApp {
                 context.startActivity(intent);
             }
         } else {
-            if("notify".equase(target)){
-            	//do something
-            }
+            //todo
         }
     }
+
     private static final Map<String, Class<? extends Activity>> activityMap = new HashMap<>();
 
     static {
-        activityMap.put("demo2", DemoActivity2.class);
-        activityMap.put("demo3", DemoActivity3.class);
+        activityMap.put("setting", SettingActivity.class);
+        activityMap.put("personal", PersonalActivity.class);
     }
+}
 }
 ```
 
