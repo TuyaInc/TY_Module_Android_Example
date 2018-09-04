@@ -20,6 +20,7 @@ public class DemoApplication extends MultiDexApplication {
         //使用涂鸦sdk开发接入时使用下述方法进行初始化
         //直接作为涂鸦app的一部分开发的时候不需要设置(使用demo调试的时候可以进行设置，正式release时不要设置)
         TuyaHomeSdk.init(this, "appKey", "appSecret");
+        SmartInitializer.startPipeLine();
 //
 //
 //        RedirectService redirectService = MicroContext.getServiceManager().findServiceByInterface(

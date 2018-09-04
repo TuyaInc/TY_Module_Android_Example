@@ -2,8 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 选中状态下 -->
-    <item android:color="#ff3b20" android:state_selected="true" />
+    <item android:color="@color/common_tab_selected" android:state_selected="true" />
     <!-- 正常状态下 -->
-    <item android:color="#8a8e91" />
+    <item android:color="@color/common_tab_normal" />
 
 </selector>

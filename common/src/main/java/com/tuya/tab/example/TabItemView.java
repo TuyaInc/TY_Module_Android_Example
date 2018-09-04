@@ -7,16 +7,16 @@ import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tuya.smart.common.R;
 
-public class TabItemView extends RelativeLayout {
+public class TabItemView extends LinearLayout {
 
     protected ImageView iconView;
     protected TextView titleView;
-    protected int normalColor = 0xff8a8e91;
+    protected int normalColor = 0xffA2A3AA;
     protected int selectedColor = 0xffff3b20;
     protected boolean useCustomIconColor = false;
 
@@ -42,6 +42,7 @@ public class TabItemView extends RelativeLayout {
     }
 
     protected void init(Context context) {
+        setOrientation(VERTICAL);
         View.inflate(context, getLayoutId(), this);
         iconView = (ImageView) findViewById(R.id.icon);
         titleView = (TextView) findViewById(R.id.title);

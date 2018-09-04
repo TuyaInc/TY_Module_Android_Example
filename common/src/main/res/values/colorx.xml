@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_tab_selected">#FF3B20</color>
+    <color name="common_tab_normal">#A2A3AA</color>
+</resources>

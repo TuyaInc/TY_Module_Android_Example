@@ -154,6 +154,7 @@
     !private <methods>;
     !private <fields>;
 }
+-keep class * extends com.tuya.smart.api.start.AbstractPipeLineRunnable
 
 #EventBus
 -keep class de.greenrobot.event.**{*;}
