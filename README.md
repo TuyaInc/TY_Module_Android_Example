@@ -114,11 +114,11 @@ public class MyApp extends ModuleApp {
 	+ PIPE\_LINE\_APPLICATION\_SYNC： 应用启动后主线程调用，尽量减少使用
 	+ PIPE\_LINE\_APPLICATION\_ASYNC： 应用启动后后台调用
 	+ PIPE\_LINE\_TAB\_LAUNCHER\_STARTED： 首页启动后调用
-+ PipeLine实现Runnable，并添加相应注解,如：
++ PipeLine继承AbstractPipeLineRunnable，并添加相应注解,如：
 
 ```
 @TYPipeLine(type = PipeLineType.APP_ASYNC)
-public class MyAppAsyncPipeLine implements Runnable {
+public class MyAppAsyncPipeLine implements AbstractPipeLineRunnable {
     @Override
     public void run() {
         LogUtil.d("MyAppAsyncPipeLine", "run");
@@ -128,7 +128,7 @@ public class MyAppAsyncPipeLine implements Runnable {
 
 ```
 @TYPipeLine(type = PipeLineType.APP_SYNC)
-public class MyAppSyncPipeLine implements Runnable {
+public class MyAppSyncPipeLine implements AbstractPipeLineRunnable {
     @Override
     public void run() {
         LogUtil.d("MyAppSyncPipeLine", "run");
@@ -139,7 +139,7 @@ public class MyAppSyncPipeLine implements Runnable {
 
 ```
 @TYPipeLine(type = PipeLineType.TabLauncher)
-public class MyTabPipeLine implements Runnable {
+public class MyTabPipeLine implements AbstractPipeLineRunnable {
     @Override
     public void run() {
         LogUtil.d("MyTabPipeLine", "run");
