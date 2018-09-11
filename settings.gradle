@@ -1,2 +1,2 @@
-include ':app', ':home', ':my', ':home-api', ':common'
+include ':app', ':home', ':my', ':home-api', ':common', ':sdk-scheme'
 include ':sdk-appshell', ':sdk-framework',':sdk-tuyasmart'

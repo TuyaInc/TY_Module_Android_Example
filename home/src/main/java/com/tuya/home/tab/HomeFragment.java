@@ -10,8 +10,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.tuya.demomodule.R;
+import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.base.BaseFragment;
 import com.tuya.smart.api.router.UrlRouter;
+import com.tuya.smart.api.service.MicroService;
+import com.tuya.smart.homepage.api.AbstractHomeService;
+import com.tuya.smart.sdk.bean.DeviceBean;
 
 public class HomeFragment extends BaseFragment {
 
@@ -21,6 +25,14 @@ public class HomeFragment extends BaseFragment {
 
     protected void onButtonClick() {
         UrlRouter.execute(UrlRouter.makeBuilder(getActivity(), "home"));
+
+        //go panel
+//        AbstractHomeService abstractHomeService = MicroContext.getServiceManager()
+//                .findServiceByInterface(AbstractHomeService.class.getName());
+//        if (abstractHomeService != null) {
+//            DeviceBean deviceBean = null;
+//            abstractHomeService.goPanel(getActivity(), deviceBean);
+//        }
     }
 
 

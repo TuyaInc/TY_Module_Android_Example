@@ -33,6 +33,8 @@ dependencies {
     api project(':sdk-appshell')
     api project(':home-api')
     api project(':common')
+    api project(':sdk-scheme')
+    api project(':sdk-tuyasmart')
 
     api "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
 
