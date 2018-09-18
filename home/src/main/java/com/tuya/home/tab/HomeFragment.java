@@ -24,7 +24,7 @@ public class HomeFragment extends BaseFragment {
     }
 
     protected void onButtonClick() {
-        UrlRouter.execute(UrlRouter.makeBuilder(getActivity(), "home"));
+        UrlRouter.execute(UrlRouter.makeBuilder(getActivity(), "example_home"));
 
         //go panel
 //        AbstractHomeService abstractHomeService = MicroContext.getServiceManager()

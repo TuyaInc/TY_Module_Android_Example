@@ -2,4 +2,9 @@
 <resources>
     <color name="common_tab_selected">#FF3B20</color>
     <color name="common_tab_normal">#A2A3AA</color>
+    <color name="menu_title_textcolor">#0076FF</color>
+    <color name="orange_58">#ff5800</color>
+    <color name="line">#dbdbdb</color>
+    <color name="app_bg_color">#f8f8f8f</color>
+    <color name="colorDark">#303030</color>
 </resources>

@@ -2,7 +2,9 @@
     package="com.tuya.demomodule2">
 
     <application>
-        <activity android:name="com.tuya.personal.module.SettingActivity" />
-        <activity android:name="com.tuya.personal.module.PersonalActivity" />
+        <activity android:name="com.tuya.personal.module.SettingActivity"
+            android:theme="@style/TeAppTheme.Base"/>
+        <activity android:name="com.tuya.personal.module.PersonalActivity"
+            android:theme="@style/TeAppTheme.Base"/>
     </application>
 </manifest>

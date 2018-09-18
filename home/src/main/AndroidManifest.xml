@@ -2,6 +2,7 @@
     package="com.tuya.demomodule">
 
     <application>
-        <activity android:name="com.tuya.home.FamilyActivity" />
+        <activity android:name="com.tuya.home.FamilyActivity"
+            android:theme="@style/TeAppTheme.Base"/>
     </application>
 </manifest>

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.tuya.demomodule2.R;
-import com.tuya.smart.api.base.BaseActivity;
+import com.tuya.tab.example.BaseActivity;
 
 public class SettingActivity extends BaseActivity {
 
@@ -12,5 +12,8 @@ public class SettingActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+        initToolbar();
+        setTitle("设置");
+        setDisplayHomeAsUpEnabled();
     }
 }

@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.tuya.demomodule.R;
-import com.tuya.smart.api.base.BaseActivity;
 import com.tuya.smart.api.router.UrlBuilder;
 import com.tuya.smart.api.router.UrlRouter;
+import com.tuya.tab.example.BaseActivity;
 
 public class FamilyActivity extends BaseActivity {
 
@@ -19,7 +19,9 @@ public class FamilyActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        initToolbar();
+        setTitle("家庭");
+        setDisplayHomeAsUpEnabled();
         findViewById(R.id.jump).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

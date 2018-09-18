@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TeAppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">#ff303030</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">#ff303030</item>
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">#ffffa748</item>
+        <item name="android:windowBackground">@color/app_bg_color</item>
+
+        <item name="android:textColorPrimary">#000000</item>
+
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+
+        <item name="android:windowFullscreen">false</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+           colorControlHighlight, and colorSwitchThumbNormal. -->
+        <!--<item name="actionButtonStyle">@color/colorMenu</item>-->
+        <!--<item name="android:actionButtonStyle">@color/colorMenu</item>-->
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+
+        <item name="android:popupBackground">@android:color/transparent</item>
+
+        <item name="android:windowAnimationStyle">@style/customAnimation</item>
+
+        <item name="android:actionMenuTextColor">#ff303030</item>
+        <item name="actionMenuTextAppearance">@style/toolbar_action_text</item>
+        <item name="actionModeBackground">@color/orange_58</item>
+
+        <item name="colorSwitchThumbNormal">@android:color/black</item>
+        <item name="android:colorForeground">@color/orange_58</item>
+
+        <item name="actionMenuTextColor">#ff303030</item>
+    </style>
+
+
+    <style name="customAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/te_slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/te_slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/te_slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/te_slide_out_right</item>
+    </style>
+
+    <style name="toolbar_action_text" parent="android:TextAppearance.Holo.Widget.ActionBar.Menu">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/myActionTitleTextAppearance</item>
+        <item name="actionMenuTextColor">@style/myActionCenterMenuTextAppearance</item>
+
+    </style>
+
+    <style name="myActionTitleTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="myActionCenterMenuTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">@dimen/tuya_title_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/menu_title_textcolor</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--横线-->
+    <style name="line_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_dip</item>
+        <item name="android:background">@color/line</item>
+    </style>
+</resources>
