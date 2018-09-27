@@ -13,8 +13,7 @@ import com.tuya.demomodule.R;
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.base.BaseFragment;
 import com.tuya.smart.api.router.UrlRouter;
-import com.tuya.smart.api.service.MicroService;
-import com.tuya.smart.homepage.api.AbstractHomeService;
+import com.tuya.smart.panelcaller.api.AbsPanelCallerService;
 import com.tuya.smart.sdk.bean.DeviceBean;
 
 public class HomeFragment extends BaseFragment {
@@ -27,11 +26,11 @@ public class HomeFragment extends BaseFragment {
         UrlRouter.execute(UrlRouter.makeBuilder(getActivity(), "example_home"));
 
         //go panel
-//        AbstractHomeService abstractHomeService = MicroContext.getServiceManager()
-//                .findServiceByInterface(AbstractHomeService.class.getName());
-//        if (abstractHomeService != null) {
+//        AbsPanelCallerService absPanelCallerService = MicroContext.getServiceManager()
+//                .findServiceByInterface(AbsPanelCallerService.class.getName());
+//        if (absPanelCallerService != null) {
 //            DeviceBean deviceBean = null;
-//            abstractHomeService.goPanel(getActivity(), deviceBean);
+//            absPanelCallerService.goPanel(getActivity(), deviceBean);
 //        }
     }
 
