@@ -121,6 +121,7 @@ public class HomeTabGetter implements ITabGetter {
 + 跳转会根据ModuleApp进行跳转，ModuleApp为模块的跳转入口，跳转提供方需要继承实现下述类,告诉跳转使用方modle支持跳转的页面名字target以及所需要的参数，通过注解标识ModuleApp支持的页面名称target(当然也可以定义其他非页面的target来进行非页面的跳转处理)
 	+ 注意：ModuleApp对象可能会销毁后重新创建，暂时不要在这个对象里通过成员变量保存信息
 	+ ModuleApp支持的target在各个module里不能重复，重复会在最终打包时失败
+	+ ***在ModuleApp中startActivity时，如果传入的context不是activity，Intent需要增加Intent.FLAG_ACTIVITY_NEW_TASK，才能启动activity***
 	
 ```
 
@@ -151,6 +152,9 @@ public class MyApp extends ModuleApp {
         if (activityClass != null) {
             Intent intent = new Intent(context, activityClass);
             intent.putExtras(bundle);
+	    if (!(context instanceof Activity)) {
+            	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            }
             if (context instanceof Activity && requestCode > 0) {
                 ((Activity) context).startActivityForResult(intent, requestCode);
             } else {
@@ -180,6 +184,7 @@ public class MyApp extends ModuleApp {
 
 ### 服务
 + 服务提供方继承实现下述基类，通过注解将服务进行注册(@TYService("xxx"),xxx为服务接口名)，提供服务接口给使用方
++  ***服务MicroService的实现是一个单例，在整个APP的生命周期里只会被创建一次，也只会调用一次无参构造方法和服务的onCreate方法，不会主动调用onDestroy方法***
 
 ```
 public abstract class MicroService {
