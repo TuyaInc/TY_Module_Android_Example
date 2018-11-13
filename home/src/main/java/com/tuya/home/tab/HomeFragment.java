@@ -12,11 +12,13 @@ import android.widget.TextView;
 import com.tuya.demomodule.R;
 import com.tuya.smart.api.MicroContext;
 import com.tuya.smart.api.base.BaseFragment;
+import com.tuya.smart.api.logger.LogUtil;
 import com.tuya.smart.api.router.UrlRouter;
+import com.tuya.smart.api.tab.ITabChangeListener;
 import com.tuya.smart.panelcaller.api.AbsPanelCallerService;
 import com.tuya.smart.sdk.bean.DeviceBean;
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements ITabChangeListener{
 
     protected String getContent() {
         return "家庭";
@@ -53,5 +55,15 @@ public class HomeFragment extends BaseFragment {
             }
         });
         return contentView;
+    }
+
+    @Override
+    public void onEnter() {
+        LogUtil.d("HomeFragment", "onEnter");
+    }
+
+    @Override
+    public void onLeave() {
+        LogUtil.d("HomeFragment", "onLeave");
     }
 }
