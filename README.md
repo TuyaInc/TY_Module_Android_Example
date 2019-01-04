@@ -1,4 +1,4 @@
-## 脚手架 [![CircleCI](https://circleci.com/gh/TuyaInc/TY_Module_Android_Example/tree/master.svg?style=svg)](https://circleci.com/gh/TuyaInc/TY_Module_Android_Example/tree/master)
+## 脚手架
 + 脚手架定义了app内部的通信方式，各页面和模块之间通过脚手架提供的接口进行页面跳转和交互
 + 脚手架接入是基于涂鸦app开发的一种接入模式，比起基于涂鸦sdk开发，可以减少客户的开发时间和成本，此种模式下
 	+ 客户可以将自身已经具有的功能通过aar的方式和涂鸦的功能进行打包无缝整合成一个应用
