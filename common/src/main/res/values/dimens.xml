@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="ts_17">17dp</dimen>
-    <dimen name="ts_18">18dp</dimen>
-    <dimen name="toolbar_height">56dp</dimen>
-    <dimen name="tuya_title_size">@dimen/ts_17</dimen>
-    <dimen name="line_dip">1px</dimen>
-</resources>

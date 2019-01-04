@@ -47,6 +47,16 @@ android {
         additionalParameters = ['--multi-dex',
                                 '--set-max-idx-number=65000']
     }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 repositories {
@@ -58,15 +68,22 @@ repositories {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation project(':home')
-    implementation project(':my')
-    implementation project(':sdk-tuyasmart')
+    implementation project(':democommon')
+    implementation project(':demohometab')
+    implementation project(':demomytab')
+    implementation project(':demologin')
 
-    implementation 'com.alibaba:fastjson:1.1.45.android'
-    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.2.0'
-    implementation 'de.greenrobot:eventbus:2.4.0'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.7'
-    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
-    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    //脚手架引入
+    implementation project(':sdk-odm')
+    implementation project(':sdk-tuyasmart')
+    implementation project(':sdk-appshell')
+    compileOnly "com.tuya.android.module:tymodule-annotation:${rootProject.tymodule_annotation}"
+
+    //sdk引入
+    compile 'com.alibaba:fastjson:1.1.67.android'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+
 }

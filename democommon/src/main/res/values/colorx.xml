@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ex_common_tab_selected">#FF3B20</color>
+    <color name="ex_common_tab_normal">#A2A3AA</color>
+    <color name="ex_menu_title_textcolor">#0076FF</color>
+    <color name="ex_orange_58">#ff5800</color>
+    <color name="ex_line">#dbdbdb</color>
+    <color name="ex_app_bg_color">#f8f8f8</color>
+    <color name="ex_colorDark">#303030</color>
+    <color name="ex_tab_point_color">#FF3B30</color>
+    <color name="ex_color_accent">#ffffa748</color>
+</resources>

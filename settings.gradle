@@ -1,2 +1,2 @@
-include ':app', ':home', ':my', ':home-api', ':common', ':sdk-scheme'
-include ':sdk-appshell', ':sdk-framework',':sdk-tuyasmart'
+include ':app', ':demohometab', ':demomytab', ':democommon', ':demologin'
+include ':sdk-tuyasmart', 'sdk-odm', ':sdk-appshell'

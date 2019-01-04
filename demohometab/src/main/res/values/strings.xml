@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ex_tab_home_name">Home</string>
+    <string name="ex_family">Family</string>
+    <string name="ex_get_result">Get Result</string>
+</resources>

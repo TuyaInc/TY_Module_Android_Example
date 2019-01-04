@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+apply plugin: 'tymodule-config'
+apply plugin: 'TuyaODM'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'home-proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'home-proguard-rules.pro'
+        }
+    }
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':democommon')
+    compileOnly project(':sdk-odm')
+    compileOnly project(':sdk-tuyasmart')
+    compileOnly project(':sdk-appshell')
+    compileOnly "com.tuya.android.module:tymodule-annotation:${rootProject.tymodule_annotation}"
+
+    api "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+moduleInfo {
+    name = project.name
+    moduleGroup = "com.tuya.smart.demo"
+    version = "0.0.4"
+    descName = "Demo home tab"
+}

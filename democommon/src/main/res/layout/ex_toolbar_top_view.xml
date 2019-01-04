@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top_view"
+        style="@style/ex_toolbar_action_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ex_toolbar_height"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingBottom="0dp"
+        android:paddingRight="8dp"
+        android:paddingTop="0dp"
+        app:titleMarginTop="10dp">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ex_ts_18"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <View
+        android:id="@+id/v_title_down_line"
+        style="@style/ex_line_normal"
+        android:layout_marginTop="@dimen/ex_toolbar_height" />
+
+</FrameLayout>

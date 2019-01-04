@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ex_tab_my_name">My</string>
+    <string name="ex_my">My</string>
+    <string name="ex_result">Result</string>
+    <string name="ex_hi_family">Hi, %1$s</string>
+    <string name="ex_logout">Logout</string>
+</resources>

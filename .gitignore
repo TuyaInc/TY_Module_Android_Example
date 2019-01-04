@@ -8,6 +8,5 @@
 /captures
 .externalNativeBuild
 /.idea
-gradlew
-gradlew.bat
-gradle.properties
+*/build
+/tuyaODMRep

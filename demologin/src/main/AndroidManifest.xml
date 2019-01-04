@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tuya.demo.login">
+
+    <application>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/ExAppTheme.Base" />
+    </application>
+</manifest>

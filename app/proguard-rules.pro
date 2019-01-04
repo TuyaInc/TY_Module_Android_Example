@@ -137,36 +137,6 @@
 -keep class org.json.**{*;}
 
 
-#tuyasmart
--keep class com.tuya.smart.api.** {
-    *;
-}
-
--keep class * extends com.tuya.smart.api.model.ApiModel {
-    *;
-}
-
--keep class * extends com.tuya.smart.api.module.ModuleApp
-
--keep class * extends com.tuya.smart.api.tab.ITabGetter
-
--keep class * extends com.tuya.smart.api.service.MicroService{
-    !private <methods>;
-    !private <fields>;
-}
--keep class * extends com.tuya.smart.api.start.AbstractPipeLineRunnable
-
-#EventBus
--keep class de.greenrobot.event.**{*;}
--dontwarn de.greenrobot.event.**
--keepclassmembers class ** {
-public void onEvent*(**);
-}
-
-#commons
--keep class org.apache.commons.**{*;}
--dontwarn org.apache.commons.**
-
 #fastJson
 -keep class com.alibaba.fastjson.**{*;}
 -dontwarn com.alibaba.fastjson.**
@@ -176,10 +146,7 @@ public void onEvent*(**);
 -dontwarn io.netty.**
 
 #mqtt
--keep class org.eclipse.paho.android.service.** { *; }
 -keep class org.eclipse.paho.client.mqttv3.** { *; }
-
--dontwarn org.eclipse.paho.android.service.**
 -dontwarn org.eclipse.paho.client.mqttv3.**
 
 -dontwarn okio.**
@@ -192,4 +159,27 @@ public void onEvent*(**);
 
 -keep class com.tuya.smart.**{*;}
 -dontwarn com.tuya.smart.**
+-keep class com.tuya.sdk.**{*;}
+-dontwarn com.tuya.sdk.**
 
+#OkHttp3
+-keep class okhttp3.** { *; }
+-keep interface okhttp3.** { *; }
+-dontwarn okhttp3.**
+-dontnote okhttp3.**
+
+-keep class io.reactivex.**{*;}
+-dontwarn io.reactivex.**
+
+#
+-keep class * extends com.tuya.smart.api.tab.ITabGetter
+-keep class * extends com.tuya.smart.api.model.ApiModel {
+    *;
+}
+-keep class * extends com.tuya.smart.api.module.ModuleApp
+
+-keep class * extends com.tuya.smart.api.service.MicroService{
+    !private <methods>;
+    !private <fields>;
+}
+-keep class * extends com.tuya.smart.api.start.AbstractPipeLineRunnable

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ex_ts_17">17dp</dimen>
+    <dimen name="ex_ts_18">18dp</dimen>
+    <dimen name="ex_toolbar_height">56dp</dimen>
+    <dimen name="ex_tuya_title_size">@dimen/ex_ts_17</dimen>
+    <dimen name="ex_line_dip">1px</dimen>
+    <dimen name="ex_tab_icon_size">32dp</dimen>
+    <dimen name="ex_ty_tab_point_size">8dp</dimen>
+    <dimen name="ex_tab_point_left_margin">13dp</dimen>
+    <dimen name="ex_tab_point_top_margin">3dp</dimen>
+</resources>

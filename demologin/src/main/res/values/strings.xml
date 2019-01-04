@@ -1,0 +1,5 @@
+<resources>
+    <string name="ex_login">Login</string>
+    <string name="ex_user_hint">Mobile number</string>
+    <string name="ex_password_hint">Password</string>
+</resources>

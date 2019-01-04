@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ExAppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">#ff303030</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">#ff303030</item>
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">#ffffa748</item>
+        <item name="android:windowBackground">@color/ex_app_bg_color</item>
+
+        <item name="android:textColorPrimary">#000000</item>
+
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+
+        <item name="android:windowFullscreen">false</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+           colorControlHighlight, and colorSwitchThumbNormal. -->
+        <!--<item name="actionButtonStyle">@color/colorMenu</item>-->
+        <!--<item name="android:actionButtonStyle">@color/colorMenu</item>-->
+        <item name="android:colorBackgroundCacheHint">@android:color/transparent</item>
+
+        <item name="android:popupBackground">@android:color/transparent</item>
+
+        <!--<item name="android:windowAnimationStyle">@style/ex_customAnimation</item>-->
+
+        <item name="android:actionMenuTextColor">#ff303030</item>
+        <item name="actionMenuTextAppearance">@style/ex_toolbar_action_text</item>
+
+        <item name="android:colorForeground">@color/ex_orange_58</item>
+
+        <item name="actionMenuTextColor">#ff303030</item>
+
+        <item name="buttonStyle">@style/ex_button_style</item>
+
+    </style>
+
+
+    <style name="ex_button_style" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/ex_bg_text_bts</item>
+        <item name="android:minHeight">36dp</item>
+    </style>
+
+    <!--<style name="ex_customAnimation">-->
+        <!--<item name="android:activityOpenEnterAnimation">@anim/te_slide_in_right</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/te_slide_out_left</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/te_slide_in_left</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/te_slide_out_right</item>-->
+    <!--</style>-->
+
+    <style name="ex_toolbar_action_text" parent="android:TextAppearance.Holo.Widget.ActionBar.Menu">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/ex_myActionTitleTextAppearance</item>
+        <item name="actionMenuTextColor">@style/ex_myActionCenterMenuTextAppearance</item>
+
+    </style>
+
+    <style name="ex_myActionTitleTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ex_myActionCenterMenuTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">@dimen/ex_tuya_title_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/ex_menu_title_textcolor</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--横线-->
+    <style name="ex_line_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ex_line_dip</item>
+        <item name="android:background">@color/ex_line</item>
+    </style>
+
+    <style name="ex.Progress.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/ex_color_accent</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="ex_ProgressBar.Normal" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:minWidth">23dp</item>
+        <item name="android:maxWidth">23dp</item>
+        <item name="android:minHeight">23dp</item>
+        <item name="android:maxHeight">23dp</item>
+        <item name="android:color">#626262</item>
+    </style>
+</resources>

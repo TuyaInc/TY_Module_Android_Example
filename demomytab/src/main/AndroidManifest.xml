@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tuya.demo.my">
+
+    <application>
+        <activity
+            android:name="com.tuya.demo.personal.module.ResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/ExAppTheme.Base" />
+        <activity
+            android:name="com.tuya.demo.personal.module.PersonalActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/ExAppTheme.Base" />
+    </application>
+</manifest>
