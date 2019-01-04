@@ -57,7 +57,7 @@ apply plugin:'TuyaODMRoot'
 
 //TODO:
 repInfo{
-    userName = "huyp"
-    password = "123456789"
-    repUrl = "https://code-odm.tuya-inc.com/odmhuyp/odmhuypRepository.git"
+    userName = "xxx"
+    password = "xxx"
+    repUrl = "xxx"
 }
