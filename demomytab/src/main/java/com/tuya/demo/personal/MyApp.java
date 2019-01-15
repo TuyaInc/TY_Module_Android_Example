@@ -17,13 +17,13 @@ import java.util.Map;
 /**
  * 我的模块的路由配置
  */
-@TYRouter({"family", "personal", "result"})
+@TYRouter({"demo.personal", "demo.result"})
 public class MyApp extends ModuleApp {
     static Map<String, Class> activityMap = new HashMap<>();
 
     static {
-        activityMap.put("personal", PersonalActivity.class);
-        activityMap.put("result", ResultActivity.class);
+        activityMap.put("demo.personal", PersonalActivity.class);
+        activityMap.put("demo.result", ResultActivity.class);
 
     }
 

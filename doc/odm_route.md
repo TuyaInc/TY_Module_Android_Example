@@ -3,9 +3,11 @@
 + 2、创建类继承ModuleApp并实现route接口
 + 3、增加注解，通过注解标识ModuleApp支持的页面名称target
 
+注意
+
 + ***跳转会根据ModuleApp进行跳转，ModuleApp为组件的跳转入口***
-	+ ModuleApp对象可能会销毁后重新创建，暂时不要在这个对象里通过成员变量保存信息
-	+ ModuleApp支持的target在各个module里不能重复，重复会在最终打包时失败
++ ***ModuleApp对象可能会销毁后重新创建，暂时不要在这个对象里通过成员变量保存信息***
++ ***ModuleApp支持的target在各个module里不能重复，重复会在最终打包时失败，故在自定义路由时需要增加自己的前缀，避免冲突***
 	
 ```
 

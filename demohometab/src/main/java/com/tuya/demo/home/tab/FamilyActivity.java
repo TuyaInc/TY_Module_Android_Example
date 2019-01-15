@@ -28,7 +28,7 @@ public class FamilyActivity extends BaseActivity {
         findViewById(R.id.jump).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UrlRouter.execute(new UrlBuilder(FamilyActivity.this, "result")
+                UrlRouter.execute(new UrlBuilder(FamilyActivity.this, "demo.result")
                         .setRequestCode(REQUEST));
             }
         });

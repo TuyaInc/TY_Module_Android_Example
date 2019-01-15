@@ -38,6 +38,6 @@ public class MyFrament extends BaseTabFragment {
 
 
     protected void onButtonClick() {
-        UrlRouter.execute(new UrlBuilder(getActivity(), "personal"));
+        UrlRouter.execute(new UrlBuilder(getActivity(), "demo.personal"));
     }
 }
