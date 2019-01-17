@@ -5,7 +5,7 @@ buildscript {
         maven {
             url 'https://raw.githubusercontent.com/TuyaInc/mavenrepo/master/releases'
         }
-        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'https://maven.aliyun.com/repository/public' }
         google()
         mavenLocal()
         mavenCentral()
@@ -20,7 +20,9 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.0.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
         classpath 'com.tuya.android.module:tymodule-config:0.3.7'
-        classpath 'com.tuya.smart:tyODM-config:0.0.2'
+        classpath 'com.tuya.smart:tyODM-config:0.0.4'
+
+        classpath 'com.qihoo360.replugin:replugin-plugin-gradle:2.3.1'
     }
 }
 
@@ -29,7 +31,7 @@ allprojects {
         maven {
             url 'https://raw.githubusercontent.com/TuyaInc/mavenrepo/master/releases'
         }
-        maven{ url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'https://maven.aliyun.com/repository/public' }
         google()
         mavenCentral()
         mavenLocal()
@@ -44,20 +46,22 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
+//不要修改以下版本号，Tuya国内版本使用下属版本编译
 ext {
     minSdkVersion = 16
-    targetSdkVersion = 28
-    compileSdkVersion = 28
-    buildToolsVersion = '28.0.3'
-    supportLibVersion = '28.0.0'
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+    buildToolsVersion = '27.0.3'
+    supportLibVersion = '27.1.1'
+
     tymodule_annotation = "0.0.6"
 }
 
-apply plugin:'TuyaODMRoot'
+apply plugin: 'TuyaODMRoot'
 
 //TODO:
-repInfo{
-    userName = "xxx"
-    password = "xxx"
-    repUrl = "xxx"
+repInfo {
+    userName = "user" //替换为实际的用户名
+    password = "passwd" //替换为实际的密码
+    repUrl = "https://code-odm.tuya-inc.com/xxx/xxxRepository.git" //xxx替换为实际的git group
 }

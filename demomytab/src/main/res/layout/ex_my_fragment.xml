@@ -13,6 +13,7 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/ex_button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -21,4 +22,14 @@
         android:paddingRight="10dp"
         android:text="Open personal" />
 
+    <Button
+        android:id="@+id/route"
+        style="@style/ex_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Open route" />
 </LinearLayout>

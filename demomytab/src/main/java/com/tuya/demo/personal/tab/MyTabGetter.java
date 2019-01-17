@@ -13,7 +13,7 @@ import com.tuya.smart.tymodule_annotation.TYTabIndicator;
 /**
  * My模块的tab配置
  */
-@TYTabIndicator(name = "my", index = 2)
+@TYTabIndicator(name = "my")
 public class MyTabGetter extends BaseTabWidget {
     @Override
     public View getIndicatorView(Context context) {

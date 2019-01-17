@@ -10,5 +10,9 @@
             android:name="com.tuya.demo.personal.module.PersonalActivity"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/ExAppTheme.Base" />
+        <activity
+            android:name="com.tuya.demo.personal.module.RouterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/ExAppTheme.Base" />
     </application>
 </manifest>

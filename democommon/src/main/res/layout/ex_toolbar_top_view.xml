@@ -14,7 +14,7 @@
         android:layout_height="@dimen/ex_toolbar_height"
         android:background="@android:color/white"
         android:gravity="center_vertical"
-        android:minHeight="?attr/actionBarSize"
+        android:minHeight="@dimen/abc_action_bar_default_height_material"
         android:paddingBottom="0dp"
         android:paddingRight="8dp"
         android:paddingTop="0dp"

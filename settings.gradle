@@ -1,2 +1,2 @@
-include ':app', ':demohometab', ':demomytab', ':democommon', ':demologin'
+include ':app', ':demohometab', ':demomytab', ':democommon', ':demologin', ':pluginapp'
 include ':sdk-tuyasmart', 'sdk-odm', ':sdk-appshell'

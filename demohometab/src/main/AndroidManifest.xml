@@ -4,6 +4,7 @@
     <application>
         <activity
             android:name=".tab.FamilyActivity"
+            android:theme="@style/ExAppTheme.Base"
             android:configChanges="orientation|keyboardHidden" />
     </application>
 </manifest>

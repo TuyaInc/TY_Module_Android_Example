@@ -51,4 +51,6 @@ demo中展示了tab组件、登录组件的创建方式，以及自定义组件�
 + demologin
 	+ 登录组件
 + sdk-xxx
-	+ 涂鸦提供的基础sdk和脚手架api  
+	+ 涂鸦提供的基础sdk和脚手架api
++ pluginapp
+	+ 插件app，调试使用

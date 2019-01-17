@@ -1,0 +1,3 @@
+## PluginApp
++ PluginApp使用RePlugin框架来实现业务和涂鸦之间的路由及接口调用的联调
++ 将自定义组件编译到PluginApp中生成插件app，然后将插件app安装到特定提供的可调式的涂鸦app中，即可进行插件业务和涂鸦业务之间的联调
