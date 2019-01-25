@@ -26,5 +26,17 @@ public class RouterActivity extends BaseActivity {
                 UrlRouter.execute(RouterActivity.this, "tuyaSmart://home");
             }
         });
+        findViewById(R.id.device).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UrlRouter.execute(RouterActivity.this, "tuyaSmart://addDevice");
+            }
+        });
+        findViewById(R.id.family).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UrlRouter.execute(RouterActivity.this, "tuyaSmart://family_manage");
+            }
+        });
     }
 }
