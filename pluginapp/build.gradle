@@ -18,45 +18,48 @@ android {
 
     }
 
+    signingConfigs {
+        release {
+            storeFile file('./keystore/test.keystore')
+            storePassword "123456"
+            keyAlias "test"
+            keyPassword "123456"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 
     //移除support-fragment依赖，使用host
-    configurations {
-        all*.exclude group: 'com.android.support', module: 'support-fragment'
-    }
+//    configurations {
+//        all*.exclude group: 'com.android.support', module: 'support-fragment'
+//    }
 
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     //业务依赖
     api "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation project(':democommon')
     implementation project(':demohometab')
     implementation project(':demomytab')
-    //implementation project(':demologin')
-
+    implementation project(':demologin')
     //使用host,插件编译需要,不能compile到plugin apk中
     compileOnly files('libs/appshell.jar')
     compileOnly files('libs/odmapi.jar')
     compileOnly files('libs/sdk.jar')
-
-    //插件
-    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.1'
 }
 
-// 这个plugin需要放在android配置之后，因为需要读取android中的配置项
-apply plugin: 'replugin-plugin-gradle'
-repluginPluginConfig {
-    pluginName = "com.tuya.demo.plugin"
-    hostApplicationId = "com.tuya.smart"
-    hostAppLauncherActivity = "com.tuyasmart.sample.TuyaSplashActivity"
+apply plugin: 'com.didi.virtualapk.plugin'
+
+virtualApk {
+    packageId = 0x6f // the package id of Resources.
+    targetHost = './pluginapp/host/' // the path of application module in host project.
+    applyHostMapping = true //optional, default value: true.
+    forceUseHostDependences = true
 }

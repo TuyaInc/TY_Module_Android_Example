@@ -1,3 +1,7 @@
 {
-  "tabs":["ty_device", "ty_scene", "ty_personal", "home", "my"]
+  "tabs": [
+    "ty_device",
+    "home",
+    "my"
+  ]
 }

@@ -28,7 +28,7 @@
 
 + 调试
 
-待补充
+	+ 脚手架提供特定的调试APP来配合开发，通过调试APP完成开发阶段和涂鸦的联调。开发者可以通过将业务模块compile到demo中的pluginapp中，然后编译pluginapp，安装生成的apk插件即可。具体参见[ODM调试](./doc/odm_develop_debug.md)
 
 + 集成
 
