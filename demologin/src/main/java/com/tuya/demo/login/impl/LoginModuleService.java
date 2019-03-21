@@ -1,5 +1,6 @@
 package com.tuya.demo.login.impl;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,7 +25,9 @@ public class LoginModuleService extends AbsCustomLoginModuleService {
     @Override
     public void goLogin(Context context, Bundle bundle) {
         Intent intent = new Intent(context, LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        if(!(context instanceof Activity)){
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
         context.startActivity(intent);
     }
 }

@@ -21,6 +21,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
+        style="@style/ex_button_style"
         android:paddingRight="10dp"
         android:text="Open family" />
 

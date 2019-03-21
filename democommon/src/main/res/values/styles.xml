@@ -34,8 +34,6 @@
 
         <item name="actionMenuTextColor">#ff303030</item>
 
-        <item name="buttonStyle">@style/ex_button_style</item>
-
     </style>
 
 

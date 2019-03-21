@@ -1,5 +1,5 @@
 ## Andorid脚手架使用
-下述内容中的“demo”指的是github上的[TY_Module\_Android\_Example](https://github.com/TuyaInc/TY_Module_Android_Example)工程，地址: https://github.com/TuyaInc/TY\_Module\_Android\_Example
+下述内容中的“demo”指的是github上的[TY_Module\_Android\_Example](https://github.com/TuyaInc/TY_Module_Android_Example)工程，地址: https://github.com/TuyaInc/TY_Module_Android_Example
 
 以下说明和demo一起使用会加速理解，也可以基于demo来提高开发速度
 

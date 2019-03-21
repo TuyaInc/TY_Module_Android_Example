@@ -13,7 +13,7 @@ import com.tuya.smart.tymodule_annotation.TYTabIndicator;
 /**
  * Home模块的tab配置
  */
-@TYTabIndicator(name = "home", index = 1)
+@TYTabIndicator(name = "home")
 public class HomeTabGetter extends BaseTabWidget {
 
     private HomeFragment homeFragment;

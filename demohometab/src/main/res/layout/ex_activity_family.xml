@@ -28,5 +28,6 @@
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        style="@style/ex_button_style"
         android:text="@string/ex_get_result" />
 </LinearLayout>

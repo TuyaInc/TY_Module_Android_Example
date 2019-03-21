@@ -10,6 +10,7 @@ android {
     defaultConfig {
         minSdkVersion ext.minSdkVersion
         targetSdkVersion ext.targetSdkVersion
+        applicationId "com.tuya.demo"
         versionCode 1
         versionName '1.0'
         multiDexEnabled true
@@ -53,7 +54,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
