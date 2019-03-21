@@ -1,5 +1,5 @@
 ## 调试
-调试框架基于滴滴开源的[VirtualAPK](https://github.com/didi/VirtualAPK)开发的
+调试框架基于滴滴开源的[VirtualAPK](https://github.com/didi/VirtualAPK)开发
 ### 宿主APP
 确定使用涂鸦的脚手架进行开发，且需要和涂鸦进行交互时，涂鸦侧会提供带插件调试功能的宿主APP来辅助开发阶段的调试工作
 ### 插件APP
