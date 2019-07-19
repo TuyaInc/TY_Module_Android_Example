@@ -1,6 +1,7 @@
 package com.tuya.demo.home.tab;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.tuya.demo.common.TabItemView;
@@ -27,7 +28,7 @@ public class HomeTabGetter extends BaseTabWidget {
     }
 
     @Override
-    public BaseTabFragment getTabFragment() {
+    public Fragment getFragment() {
         homeFragment = new HomeFragment();
         return homeFragment;
     }

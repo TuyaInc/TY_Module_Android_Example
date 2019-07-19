@@ -34,7 +34,29 @@ public class PersonalActivity extends BaseActivity {
         showLoading("");
 
         //do logout
-        //....
+//        TuyaHomeSdk.getUserInstance().logout(new ILogoutCallback() {
+//            @Override
+//            public void onSuccess() {
+//                //退出登录成功后调用AbsLoginEventService通知其他业务已退出登录
+//                AbsLoginEventService absLoginEventService = MicroContext.findServiceByInterface(
+//                        AbsLoginEventService.class.getName());
+//                if (absLoginEventService != null) {
+//                    absLoginEventService.onLogout(PersonalActivity.this);
+//                }
+//                hideLoading();
+//                //跳转到登录页
+//                AbsLoginEventService loginEventService = MicroContext.findServiceByInterface(
+//                        AbsLoginEventService.class.getName());
+//                if (loginEventService != null) {
+//                    loginEventService.goLogin(PersonalActivity.this, null);
+//                }
+//            }
+//
+//            @Override
+//            public void onError(String s, String s1) {
+//
+//            }
+//        });
         //...
 
         //使用handle模拟退出登录耗时

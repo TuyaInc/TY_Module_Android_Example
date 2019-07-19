@@ -1,12 +1,12 @@
 package com.tuya.demo.personal.tab;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.tuya.demo.common.TabItemView;
 import com.tuya.demo.my.R;
 import com.tuya.smart.api.logger.LogUtil;
-import com.tuya.smart.api.tab.BaseTabFragment;
 import com.tuya.smart.api.tab.BaseTabWidget;
 import com.tuya.smart.tymodule_annotation.TYTabIndicator;
 
@@ -24,7 +24,7 @@ public class MyTabGetter extends BaseTabWidget {
     }
 
     @Override
-    public BaseTabFragment getTabFragment() {
+    public Fragment getFragment() {
         return new MyFrament();
     }
 

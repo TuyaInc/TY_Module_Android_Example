@@ -5,7 +5,6 @@ def ext = rootProject.ext
 
 android {
     compileSdkVersion ext.compileSdkVersion
-    buildToolsVersion ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion ext.minSdkVersion
@@ -15,7 +14,7 @@ android {
         versionName '1.0'
         multiDexEnabled true
         ndk {
-            abiFilters "armeabi-v7a", "x86"
+            abiFilters "armeabi-v7a"
         }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -28,8 +27,8 @@ android {
 
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     packagingOptions {
@@ -75,16 +74,11 @@ dependencies {
     implementation project(':demologin')
 
     //脚手架引入
-    implementation project(':sdk-odm')
-    implementation project(':sdk-tuyasmart')
-    implementation project(':sdk-appshell')
     compileOnly "com.tuya.android.module:tymodule-annotation:${rootProject.tymodule_annotation}"
 
     //sdk引入
-    compile 'com.alibaba:fastjson:1.1.67.android'
-    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
-    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    implementation 'com.alibaba:fastjson:1.1.67.android'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
 
 }

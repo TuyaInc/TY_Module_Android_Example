@@ -17,8 +17,8 @@ public class DemoApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        SmartInitializer.setDebug(true);
         SmartInitializer.init(this);
+        SmartInitializer.setEnableServiceRedirect(true);
         //demo运行时需要替换为对应的appKey和appSecret
         TuyaHomeSdk.init(this, "appKey", "appSecret");
         TuyaHomeSdk.setOnNeedLoginListener(new INeedLoginListener() {

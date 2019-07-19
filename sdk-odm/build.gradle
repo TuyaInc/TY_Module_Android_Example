@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('tuyasmart-odmapi-3.8.0.aar'))

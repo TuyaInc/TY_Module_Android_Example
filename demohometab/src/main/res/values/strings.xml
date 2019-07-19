@@ -3,4 +3,7 @@
     <string name="ex_tab_home_name">Home</string>
     <string name="ex_family">Family</string>
     <string name="ex_get_result">Get Result</string>
+    <string name="ex_add_device">Add Device</string>
+    <string name="ex_family_manager">Family_manager</string>
+    <string name="ex_device_control">Custom Device Panel</string>
 </resources>

@@ -65,7 +65,8 @@ dependencies{
 参考demo中的login组件
 
 ### 服务调用
-+ 服务使用方通过MicroContext.findServiceByInterface(String serviceName)来获取服务，并调用服务接口，如之前登录成功后的通知就是通过调用涂鸦服务完成
+#### 使用涂鸦服务
+服务使用方通过MicroContext.findServiceByInterface(String serviceName)来获取服务，并调用服务接口，如之前登录成功后的通知就是通过调用涂鸦服务完成
 
 ```
     AbsLoginEventService loginEventService = MicroContext.findServiceByInterface(
@@ -76,7 +77,20 @@ dependencies{
 ```
 ***当服务的实现组件没有被编译进apk时，findServiceByInterface返回的为null***
 
-+ 如果希望在自定义模块中也使用路由，参看[自定义服务](./odm_service.md)
+#### 服务重载
++ 如果希望重载涂鸦的服务，可以通过自定义类extends服务的基类T(T表示服务的基类)，实现基类的接口，如果希望部分重载涂鸦服务的接口，可以在extends T的同时implements DefaultServiceProxy<T>，此时会将涂鸦服务的默认实现传递是自定义的实现类，从而服务重载的实现类中可以使用涂鸦的默认服务接口，也可以使用自己的实现PanelCallerService的使用
++ 注册重载的服务
+
+```
+/注册自定义的重载服务
+RedirectService redirectService = MicroContext
+    .findServiceByInterface(RedirectService.class.getName());
+redirectService.registerService(AbsPanelCallerService.class.getName(), new PanelCallerService());
+```
+
++ 具体可以参考demo中的PanelCallerService的使用
+
+如果希望在自定义模块中也使用服务，参看[自定义服务](./odm_service.md)
 
 ### 页面路由
 
@@ -96,6 +110,29 @@ UrlRouter.execute(context, "tuyaSmart://familyAction?action=no_family")
 UrlRouter.execute(UrlRouter.makeBuilder(context,"familyAction").putString("action","no_family"))
 
 ```
+
++ 路由拦截
+	+  如果希望在路由的过程中做拦截操作，可以通过注册RedirectService.UrlInterceptor，来实施拦截操作
+	
+```
+        RedirectService.UrlInterceptor interceptor = new RedirectService.UrlInterceptor() {
+            @Override
+            public void forUrlBuilder(UrlBuilder urlBuilder, RedirectService.InterceptorCallback interceptorCallback) {
+                //将到demo.home的路由重定向到home
+                if ("demo.home".equals(urlBuilder.target)) {
+                    UrlRouter.execute(urlBuilder.context, "tuyaSmart://home");
+                    //拦截，不再走原来的路由操作
+                    interceptorCallback.interceptor("");
+                } else {
+                    //不拦截，继续原来流程
+                    interceptorCallback.onContinue(urlBuilder);
+                }
+            }
+        };
+        redirectService.registerUrlInterceptor(interceptor);
+```
+
++ 参见demo中HomeModuleInitPipeLine的处理
 
 + 如果希望在自定义模块中也使用路由，参看[自定义路由](./odm_route.md)
 

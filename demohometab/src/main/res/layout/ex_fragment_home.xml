@@ -7,22 +7,42 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/demo_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Home tab"
+        android:text="Home"
         android:textColor="@color/ex_colorDark" />
 
     <Button
-        android:id="@+id/demo_button"
+        android:id="@+id/open_family"
+        style="@style/ex_button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
-        style="@style/ex_button_style"
         android:paddingRight="10dp"
-        android:text="Open family" />
+        android:text="@string/ex_family_manager" />
 
+    <Button
+        android:id="@+id/open_device"
+        style="@style/ex_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/ex_device_control" />
+
+    <Button
+        android:id="@+id/add_device"
+        style="@style/ex_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/ex_add_device" />
 </LinearLayout>

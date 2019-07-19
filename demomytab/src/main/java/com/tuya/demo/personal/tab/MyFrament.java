@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +17,7 @@ import com.tuya.smart.api.router.UrlBuilder;
 import com.tuya.smart.api.router.UrlRouter;
 import com.tuya.smart.api.tab.BaseTabFragment;
 
-public class MyFrament extends BaseTabFragment {
+public class MyFrament extends Fragment {
 
     @Override
     @Nullable

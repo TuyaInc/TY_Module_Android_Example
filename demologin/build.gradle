@@ -3,7 +3,6 @@ apply plugin: 'tymodule-config'
 apply plugin: 'TuyaODM'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
 
     defaultConfig {
@@ -40,11 +39,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    api project(':democommon')
 
-    implementation project(':democommon')
-
-    compileOnly project(':sdk-odm')
-    compileOnly project(':sdk-tuyasmart')
     compileOnly "com.tuya.android.module:tymodule-annotation:${rootProject.tymodule_annotation}"
 }
 

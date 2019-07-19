@@ -5,7 +5,6 @@ def ext = rootProject.ext
 
 android {
     compileSdkVersion ext.compileSdkVersion
-    buildToolsVersion ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion ext.minSdkVersion
@@ -35,10 +34,12 @@ android {
         }
     }
 
-    //移除support-fragment依赖，使用host
-//    configurations {
-//        all*.exclude group: 'com.android.support', module: 'support-fragment'
-//    }
+    //移除sdk依赖，使用host
+    configurations.all {
+        exclude group: 'com.tuya.smart', module: 'tuyasmart'
+        exclude group: 'com.tuya.smart', module: 'tuyasmart-appshell'
+        exclude group: 'com.tuya.smart', module: 'tuyasmart-odmapi'
+    }
 
 }
 

@@ -3,7 +3,6 @@ apply plugin: 'TuyaODM'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -38,6 +37,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //涂鸦sdk，sdk新版本发布后，版本号可能需要更新
+    api 'com.tuya.smart:tuyasmart:3.9.6'
+    api 'com.tuya.smart:tuyasmart-appshell:3.10.0'
+    api 'com.tuya.smart:tuyasmart-odmapi:3.11.0'
 }
 
 moduleInfo {

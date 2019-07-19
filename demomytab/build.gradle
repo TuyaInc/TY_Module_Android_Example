@@ -5,7 +5,6 @@ apply plugin: 'TuyaODM'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
 
     defaultConfig {
@@ -39,9 +38,6 @@ dependencies {
 
     implementation project(':democommon')
 
-    compileOnly project(':sdk-odm')
-    compileOnly project(':sdk-tuyasmart')
-    compileOnly project(':sdk-appshell')
     compileOnly "com.tuya.android.module:tymodule-annotation:${rootProject.tymodule_annotation}"
 
     api "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"

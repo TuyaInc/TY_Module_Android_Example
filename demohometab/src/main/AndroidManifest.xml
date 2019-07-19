@@ -3,8 +3,16 @@
 
     <application>
         <activity
-            android:name=".tab.FamilyActivity"
-            android:theme="@style/ExAppTheme.Base"
-            android:configChanges="orientation|keyboardHidden" />
+            android:name=".tab.activity.FamilyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/ExAppTheme.Base" />
+        <activity
+            android:name=".tab.activity.AddDeviceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/ExAppTheme.Base" />
+        <activity
+            android:name=".tab.panel.CustomDeviceControlActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/ExAppTheme.Base" />
     </application>
 </manifest>
